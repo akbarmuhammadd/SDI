@@ -1,0 +1,148 @@
+// create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "M Fikri",
+    "email": "admin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+//  get ALL Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/303fe1b4-13ec-47c9-8586-25af00b5b1a6
+
+###
+// update a User
+PATCH  http://localhost:5000/users/303fe1b4-13ec-47c9-8586-25af00b5b1a6
+Content-Type: application/json
+
+{
+    "name": "Jhon Doe",
+    "email": "jhon@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Delete a user
+DELETE  http://localhost:5000/users/6692c0ef-f169-41f6-9a16-dd48b9182104
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "123456"
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "jhon@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/me
+
+###
+DELETE  http://localhost:5000/logout
+
+###
+// get all product
+GET http://localhost:5000/products
+
+###
+// get single product
+GET http://localhost:5000/products/09606ee6-6771-4f7a-8167-717ffad11b2b
+
+###
+// post data product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "npp": 3214565,
+    "npwp": 32123456654322,
+    "awal_masuk": "25-12-2020",
+    "name": "Ahmad Anzari",
+    "email": "anzari@gmail.com",
+    "jenis_kelamin": "laki-laki",
+    "tanggal_lahir": "23 September 1997",
+    "profesi": "Nakes lain",
+    "str": "-",
+    "sip": "-",
+    "alamat": "Kudus",
+    "no_hp": "087876546342",
+    "status_nikah": "menikah",
+    "pendidikan": "S1 Akuntansi",
+    "tipe_bpjs": "Ketenagakerjaan",
+    "no_bpjs": 0345262761521
+}
+
+###
+// update product
+PATCH  http://localhost:5000/products/3ff3397f-c3b9-4d9b-b518-0b90432caaec
+Content-Type: application/json
+
+{
+    "npp": 3214565,
+    "npwp": 32123456654322,
+    "awal_masuk": "25-12-20",
+    "name": "Ahmad Anzari",
+    "email": "anzari@gmail.com",
+    "jenis_kelamin": "laki-laki",
+    "tanggal_lahir": "23 September 1997",
+    "profesi": "Nakes lain",
+    "str": "-",
+    "sip": "-",
+    "alamat": "Kudus",
+    "no_hp": "087876546342",
+    "status_nikah": "menikah",
+    "pendidikan": "S1 Akuntansi",
+    "tipe_bpjs": "Ketenagakerjaan",
+    "no_bpjs": 345262761521
+}
+
+###
+// delete product
+DELETE http://localhost:5000/products/09606ee6-6771-4f7a-8167-717ffad11b2b
+
+###
+// get all employe
+GET http://localhost:5000/employes
+
+###
+// create employe
+POST http://localhost:5000/employes
+Content-Type: application/json
+
+{
+    "npp": 3214565,
+    "npwp": 32123456654322,
+    "awal_masuk": "25-12-20",
+    "nama": "Ahmad Anzari",
+    "email": "anzari@gmail.com",
+    "jenis_kelamin": "laki-laki",
+    "tanggal_lahir": "23 September 1997",
+    "profesi": "Nakes lain",
+    "str": "-",
+    "sip": "-",
+    "alamat": "Kudus",
+    "no_hp": "087876546342",
+    "status_nikah": "menikah",
+    "pendidikan": "S1 Akuntansi",
+    "tipe_bpjs": "Ketenagakerjaan"
+}
